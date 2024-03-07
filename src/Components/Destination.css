@@ -1,9 +1,10 @@
 /* Destination.css */
 .destination-item {
-    min-height: 100vh;
+    height: 100vh;
     background-image: url('../assets/destination/background-destination-desktop.jpg');
     background-size: cover;
     background-position: center;
+    padding-bottom: 20vh;
 }
 
 .destination-item > h1 {
@@ -18,6 +19,7 @@
 .destination-item > h1 > span {
     color: #383838;
     padding-right: 1rem;
+    font-weight: bold;
 }
 
 .destination-item > img {
@@ -39,7 +41,6 @@
 .destination-description {
     padding: 2rem 0;
     position: relative;
-
 }
 
 .destination-item .right h3 {

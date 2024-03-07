@@ -1,0 +1,61 @@
+.crew-item {
+    background-image: url('../assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
+.crew-item > h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    padding:0 4rem;
+    padding-top: 2vh;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.crew-item > h1 > span {
+    color: #383838;
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.left > h2 {
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #55585E;}
+
+.left > h3 {
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.crew-description {
+    max-width: 444px;
+    line-height: 32px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: #D0D6F9;
+}
+
+.crew-item .right {
+    max-width: 445px;
+}
+
+.crew-item .right > img {
+    width: 100%;
+    height: auto;
+}
