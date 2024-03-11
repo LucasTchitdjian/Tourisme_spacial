@@ -11,9 +11,11 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
     letter-spacing: 4.72px;
-    padding:2rem 4rem;
     text-transform: uppercase;
     font-weight: 400;
+    padding-bottom: 137px;
+    padding-top: 76px;
+    padding-left: 166px;
 }
 
 .destination-item > h1 > span {
@@ -28,10 +30,13 @@
     object-fit: cover;
 }
 
-.container {
+.destination-item .container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 157px;
+    padding-left: 230px;
+    padding-right: 163px;          
 }
 
 .destination-item .right {
@@ -41,6 +46,7 @@
 .destination-description {
     padding: 2rem 0;
     position: relative;
+    padding-bottom: 54px;
 }
 
 .destination-item .right h3 {
@@ -61,8 +67,8 @@
 .destination-features {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 0;
+    gap: 68px;
 }
 
 .destination-description::after {
@@ -90,4 +96,46 @@
     font-size: 28px;
     color: #FFFFFF;
     font-weight: 400;
+}
+
+@media screen and (max-width: 450px) {
+    .destination-item {
+        height: 100vh;
+    }
+    .destination-item > h1 {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+        text-align: center;
+        padding: 0;
+        padding-top: 88px;
+    }
+
+    .destination-item .container {
+        flex-direction: column;
+        gap: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .destination-item .right {
+        padding-left: 0;
+    }
+    .left img {
+        width: 170px;
+        height: 170px;
+    }
+    .destination-item .right h3 {
+        font-size: 56px;
+        text-align: center;
+    }
+    .destination-item .right p {
+        font-size: 15px;
+        text-align: center;
+        padding: 0 24px;
+    }
+    .destination-features {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
 }

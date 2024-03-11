@@ -1,0 +1,121 @@
+.technology-item {
+    background-image: url('../assets/technology/background-technology-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
+.technology-item > h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    padding-top: 2vh;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 137px;
+    padding-top: 76px;
+    padding-left: 166px;
+}
+
+.technology-item > h1 > span {
+    color: #383838;
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+.technology-item .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.technology-item .left {
+    padding-left: 165px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.technology-item .left > h2 {
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #55585E;
+}
+
+.technology-item .techno-infos > h3 {
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-top: 11px;
+    padding-bottom: 17px;
+}
+
+.technology-item .left .numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.technology-item .left .numbers button:first-child {
+    background-color: #FFFFFF;
+    color: #0B0D17;
+}
+
+.technology-item .left .numbers button {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.technology-description {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: #D0D6F9;
+    line-height: 32px;
+}
+
+.technology-item .right {
+    justify-self: flex-end;
+}
+
+.technology-item .right > img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 101px;
+}
+
+.technology-item .left p {
+    max-width: 444px;
+}
+
+.technology-item .techno-infos span {
+    color: #D0D6F9;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 450px) {
+    .technology-item .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .technology-item .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+    .technology-item .left .numbers {
+        flex-direction: row;
+    }
+}

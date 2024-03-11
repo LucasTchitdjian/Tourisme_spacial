@@ -9,25 +9,67 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+header .logo {
+    position: relative;
+}
+
+header .logo::after {
+    content: '';
+    position: absolute;
+    width: 473px;
+    height: 1px;
+    background-color: #979797;
+    bottom: 50%;
+    left: 7vw;    
+    transform: translateY(-50%);
 }
 
 .menu {
     width: 50%;
+    margin:2rem 0;
 }
 
 .menu ul {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 50px;
     backdrop-filter: blur(10px);
     padding: 3rem;
+    padding-right: 163px;
 }
 
 .menu li, .menu span {
     font-size: 16px;
     letter-spacing: 2.7px;
+    cursor: pointer;
+}
+
+.menu li::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background-color: #FFFFFF;
+    bottom: 0;
+    left: 3.5vw;
 }
 
 .menu span {
     font-weight: bold;
+}
+
+@media screen and (max-width: 450px){
+    .menu ul li, .menu ul li span {
+        display: none;
+    }
+    header .logo::after {
+        display: none;
+    }
 }

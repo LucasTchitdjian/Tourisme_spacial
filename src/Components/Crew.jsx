@@ -28,6 +28,12 @@ export function Crew({ crew }) {
                     <h2>{crew.role}</h2>
                     <h3>{crew.name}</h3>
                     <p className='crew-description'>{crew.bio}</p>
+                    <div className="buttons">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
                 </div>
                 <div className="right">
                     <img src={crewImage} alt={crew.name + " image"} />
