@@ -65,11 +65,72 @@ header .logo::after {
     font-weight: bold;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1064px){
+
+    header {
+        margin-left: 39px;
+        padding-top: 24px;
+        align-items: flex-start;
+    }
+
+    .menu {
+        margin: 0;
+    }
+    .hero .left h1 {
+        font-size: 20px;
+        letter-spacing: 3.38px;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .hero .left h1 strong {
+        font-size: 150px;
+    }
+
+    .hero .left p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .hero .right a {
+        padding: 103px 42px;
+    }
+
+    .menu ul {
+        align-items: flex-start;
+        padding:2rem 0;
+    }
+
+    .menu li span {
+        display: none;
+    }
+
+    .hero ul {
+        gap: 37px;
+    }
+}
+
 @media screen and (max-width: 450px){
+    .menu {
+        display: none;
+    }
     .menu ul li, .menu ul li span {
         display: none;
     }
     header .logo::after {
         display: none;
+    }
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger-menu > svg {
+        width: 24px;
+        height: 21px;
     }
 }

@@ -78,14 +78,72 @@
     height: auto;
 }
 
+@media screen and (max-width: 1064px) {
+    .crew-item {
+        background-image: url('../assets/crew/background-crew-tablet.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+
 @media screen and (max-width: 450px) {
-    .crew-item .container {
+    .crew-item {
+        background-image: url('../assets/crew/background-crew-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .crew-item > h1 {
+        font-size: 16px;
+        text-align: center;
+        padding: 0;
+        padding-top: 88px;
+        padding-left: 105px;
+        padding-right: 104px;
+        padding-bottom: 32px;
+    }
+
+    .crew-item .left {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+
+    .crew-item .right {
+        flex-grow: 1;
+        border-bottom: 1px solid #383B4B;
+        margin: 0 24px;
+    }
+
+    .crew-item .left .buttons {
+        order: -1;
+    }
+
+    .crew-item .left > h2 {
+        font-size: 16px;
+    }
+    .crew-item .left > h3 {
+        font-size: 24px;
+    }
+    .crew-description {
+        font-size: 15px;
+        text-align: center;
+        width: 80%;
+        padding-bottom: 79px;
+    }
+    .crew-item .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        text-align: center;
     }
     .crew-item .right > img {
-        width: 180px;
-        height: 222px;
+        width: auto;
+        height: 223px;
+    }
+
+    .crew-item .buttons {
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
