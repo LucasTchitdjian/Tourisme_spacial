@@ -105,6 +105,31 @@
         background-size: cover;
         background-position: center;
     }
+    .destination-item > h1 {
+        padding: 0;
+        padding-left: 38px;
+        padding-top: 136px;
+        padding-bottom: 60px;
+
+    }
+    .destination-item .container {
+        flex-direction: column;
+        padding: 0;
+        gap: 119px;
+    }
+    .destination-item .right h3 {
+        text-align: center;
+    }
+    .destination-item .right {
+        max-width: 573px;
+    }
+    .destination-description {
+        text-align: center;
+    }
+    .destination-features {
+        gap: 0;
+        justify-content: space-around ;
+    }
 }
 
 @media screen and (max-width: 450px) {

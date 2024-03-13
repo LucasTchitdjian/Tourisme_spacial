@@ -16,12 +16,12 @@ const crewImages = {
     "Anousheh Ansari": anoushehPng,
 };
 
-export function Crew({ crew }) {
+export function Crew({ crew, crewRef }) {
     // Get the correct image based on the destination name
     const crewImage = crewImages[crew.name];
 
     return (
-        <section className="crew-item">
+        <section className="crew-item" ref={crewRef}>
             <h1><span>02</span> Meet your crew</h1>
             <div className="container">
                 <div className="left">

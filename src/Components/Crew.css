@@ -84,6 +84,27 @@
         background-size: cover;
         background-position: center;
     }
+    
+    .crew-item > h1 {
+        padding: 0;
+        padding-left: 38.5px;
+        padding-top: 136px;
+        padding-bottom: 60px;
+    }
+    .crew-item .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .crew-item .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .crew-item .buttons {
+        padding-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 450px) {

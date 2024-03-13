@@ -51,7 +51,7 @@ header .logo::after {
     cursor: pointer;
 }
 
-.menu li::after {
+.menu li.active::after {
     content: '';
     position: absolute;
     width: 70px;
@@ -69,17 +69,42 @@ header .logo::after {
     display: none;
 }
 
+.hamburger-icon {
+    display: none;
+}
+
 @media screen and (max-width: 1064px){
 
     header {
-        margin-left: 39px;
-        padding-top: 24px;
         align-items: flex-start;
+    }
+
+    header .logo {
+        padding-top: 24px;
+    }
+
+    header .logo::after {
+        display: none;
     }
 
     .menu {
         margin: 0;
+        background-color: #1A1B26;
+        margin-left: 123px;
+        width: 70%;
     }
+
+    .menu li {
+        height: 100%;
+        position: relative;
+    }
+
+    .menu li.active::after {
+        width: 100%;
+        bottom: -2rem;
+        left: 0;
+    }
+
     .hero .left h1 {
         font-size: 20px;
         letter-spacing: 3.38px;
@@ -102,8 +127,17 @@ header .logo::after {
     }
 
     .menu ul {
-        align-items: flex-start;
-        padding:2rem 0;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .menu ul li span {
+        font-size: 14px;
+    }
+
+    .menu {
+        width: 70%;
     }
 
     .menu li span {
@@ -132,5 +166,44 @@ header .logo::after {
     .hamburger-menu > svg {
         width: 24px;
         height: 21px;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    header.hamburger-open .hamburger-menu {
+        display: block;
+        height: 100vh;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(81px);
+    }
+
+    header.hamburger-open .hamburger-menu .container {
+        padding-left: 32px;
+        height: 50vh;
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header.hamburger-open .hamburger-menu li {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+        header.hamburger-open .hamburger-menu li span {
+            font-weight: bold;
+            padding-right: 11px;
+        }
+
+    header.hamburger-open .hamburger-menu .icon {
+        position: absolute;
+        top: 34px;
+        right: 20px;
     }
 }

@@ -6,11 +6,12 @@ import { CrewContainer } from './Components/CrewContainer';
 import { TechnologyContainer } from './Components/TechnologyContainer';
 
 function App() {
+
   return (
     <div className="App">
       <div className="home-background">
         <Header />
-        <Hero />
+        <Hero/>
       </div>
       <DestinationsContainer />
       <CrewContainer />

@@ -14,12 +14,12 @@ const technologyImages = {
     "Space capsule": victorPng,
 };
 
-export function Technology({ technology }) {
+export function Technology({ technology, technologyRef }) {
     // Get the correct image based on the destination name
     const technologyImage = technologyImages[technology.name];
 
     return (
-        <section className="technology-item">
+        <section className="technology-item" ref={technologyRef}>
             <h1><span>03</span> Space lauNch 101</h1>
             <div className="container">
                 <div className="left">

@@ -16,12 +16,12 @@ const destinationImages = {
     "Titan": titanPng,
 };
 
-export function Destination({ destination }) {
+export function Destination({ destination, destinationRef }) {
     // Get the correct image based on the destination name
     const destinationImage = destinationImages[destination.name];
 
     return (
-        <section className="destination-item">
+        <section className="destination-item" ref={destinationRef}>
             <h1><span>01</span> Pick your destination</h1>
             <div className="container">
                 <div className="left">

@@ -1,8 +1,9 @@
 import './Hero.css'
 
-export function Hero() {
+export function Hero({ homeRef }) {
+
     return (
-        <div className="hero">
+        <div ref={homeRef} className="hero">
             <section>
                 <div className="left">
                     <h1>  So, you want to travel to <strong>Space</strong>
@@ -13,7 +14,7 @@ export function Hero() {
                     </p>
                 </div>
                 <div className="right">
-                <a href="https://explore.com">Explore</a>
+                    <a href="https://explore.com">Explore</a>
                 </div>
             </section>
         </div>
