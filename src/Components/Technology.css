@@ -59,6 +59,14 @@
     gap: 32px;
 }
 
+.technology-item .numbers button {
+    cursor: pointer;
+}
+
+.technology-item .left .numbers button:hover {
+
+}
+
 .technology-item .left .numbers button:first-child {
     background-color: #FFFFFF;
     color: #0B0D17;
@@ -69,11 +77,15 @@
     width: 80px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid #FFFFFF;
+    border: 1px solid gray;
     color: #FFFFFF;
     font-family: 'Bellefair', serif;
     font-size: 32px;
     letter-spacing: 2px;
+}
+
+.technology-item .left .numbers button:hover {
+    border: 1px solid #D0D6F9;
 }
 
 .technology-description {
@@ -197,8 +209,8 @@
 
     .technology-item .right > img {
         width: 100%;
-        height: 170px;
-        object-fit:cover; /* Ajoutez cette ligne */
+        height: 100%;
+        object-fit: cover;
         padding: 0;
         margin-bottom: 34px;
     }

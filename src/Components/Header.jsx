@@ -11,9 +11,36 @@ export function Header() {
         setHamburgerMenu(!hamburgerMenu);
     }
 
-    const handleMenuClick = (menuId, ref) => {
+    const handleMenuClick = (menuId) => {
         setActiveMenu(menuId);
-    }
+        let selector = '';
+        switch (menuId) {
+            case 'HOME':
+                selector = '.hero';
+                break;
+            case 'DESTINATION':
+                selector = '.destination-item';
+                break;
+            case 'CREW':
+                selector = '.crew-item';
+                break;
+            case 'TECHNOLOGY':
+                selector = '.technology-item';
+                break;
+            default:
+                selector = '';
+        }
+        if (selector) {
+            scrollToSection(selector);
+        }
+    };
+
+    const scrollToSection = (selector) => {
+        const section = document.querySelector(selector);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <header className={hamburgerMenu ? 'hamburger-open' : ''}>
@@ -23,19 +50,31 @@ export function Header() {
             <div className="menu">
                 <ul>
                     <li className={activeMenu === 'HOME' ? 'active' : ''}
-                        onClick={() => handleMenuClick('HOME')}>
+                        onClick={(e) => {
+                            e.preventDefault(); // Empêche l'action par défaut
+                            handleMenuClick('HOME');
+                        }}>
                         <span>00</span> HOME
                     </li>
                     <li className={activeMenu === 'DESTINATION' ? 'active' : ''}
-                        onClick={() => handleMenuClick('DESTINATION')}>
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('DESTINATION');
+                        }}>
                         <span>01</span> DESTINATION
                     </li>
                     <li className={activeMenu === 'CREW' ? 'active' : ''}
-                        onClick={() => handleMenuClick('CREW')}>
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('CREW');
+                        }}>
                         <span>02</span> CREW
                     </li>
                     <li className={activeMenu === 'TECHNOLOGY' ? 'active' : ''}
-                        onClick={() => handleMenuClick('TECHNOLOGY')}>
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('TECHNOLOGY');
+                        }}>
                         <span>03</span> TECHNOLOGY
                     </li>
                 </ul>

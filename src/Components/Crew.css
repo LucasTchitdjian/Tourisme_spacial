@@ -71,6 +71,11 @@
     border-radius: 50%;
     border: none;
     background-color: #979797;
+    cursor: pointer;
+}
+
+.buttons > button:hover {
+    background-color: #86878C;
 }
 
 .crew-item .right > img {
