@@ -13,6 +13,7 @@ export function Header() {
 
     const handleMenuClick = (menuId) => {
         setActiveMenu(menuId);
+        setHamburgerMenu(false);
         let selector = '';
         switch (menuId) {
             case 'HOME':
@@ -86,10 +87,22 @@ export function Header() {
                 </ul>
             </div>
             <div className="hamburger-menu">
-                <div className="container"><li className='hamburger-menu-text'><span>00</span> Home</li>
-                    <li className='hamburger-menu-text'><span>01</span> Destination</li>
-                    <li className='hamburger-menu-text'><span>02</span> Crew</li>
-                    <li className='hamburger-menu-text'><span>03</span> Technology</li></div>
+                <div className="container"><li onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('HOME');
+                        }} className='hamburger-menu-text'><span>00</span> Home</li>
+                    <li onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('DESTINATION');
+                        }} className='hamburger-menu-text'><span>01</span> Destination</li>
+                    <li onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('CREW');
+                        }} className='hamburger-menu-text'><span>02</span> Crew</li>
+                    <li onClick={(e) => {
+                            e.preventDefault();
+                            handleMenuClick('TECHNOLOGY');
+                        }} className='hamburger-menu-text'><span>03</span> Technology</li></div>
                 <li className='icon' onClick={handleHamburgerMenu}><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" /><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" /></g></svg></li>
             </div>
         </header>

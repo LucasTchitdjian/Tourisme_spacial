@@ -63,11 +63,17 @@
     cursor: pointer;
 }
 
-.technology-item .left .numbers button:hover {
-
+.Launch .left .numbers button:first-child {
+    background-color: #FFFFFF;
+    color: #0B0D17;
 }
 
-.technology-item .left .numbers button:first-child {
+.Spaceport .left .numbers button:nth-child(2) {
+    background-color: #FFFFFF;
+    color: #0B0D17;
+}
+
+.Space .left .numbers button:last-child {
     background-color: #FFFFFF;
     color: #0B0D17;
 }

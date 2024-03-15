@@ -65,6 +65,30 @@
     background-color: #FFFFFF;
 }
 
+section.Mark button:first-child {
+    background-color: #979797;
+}
+
+section.Victor button:first-child {
+    background-color: #979797;
+}
+
+section.Anousheh button:first-child {
+    background-color: #979797;
+}
+
+section.Mark button:nth-child(2), .buttons > button:first-child {
+    background-color: #FFFFFF;
+}
+
+section.Victor button:nth-child(3) {
+    background-color: #FFFFFF;
+}
+
+section.Anousheh button:nth-child(4) {
+    background-color: #FFFFFF;
+}
+
 .buttons > button {
     width: 15px;
     height: 15px;

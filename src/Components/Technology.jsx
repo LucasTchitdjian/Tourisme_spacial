@@ -1,6 +1,7 @@
 // Technology.jsx
 import React from 'react';
 import './Technology.css';
+import { useState } from 'react';
 
 // // Import all destination images
 import douglasPng from '../assets/technology/image-launch-vehicle-portrait.jpg';
@@ -15,18 +16,49 @@ const technologyImages = {
 };
 
 export function Technology({ technology, technologyRef }) {
+
+    const [activeMenu, setActiveMenu] = useState('SPACE LAUNCH');
+
+    const handleMenuClick = (menuId) => {
+        setActiveMenu(menuId);
+        let selector = '';
+        switch (menuId) {
+            case 'SPACE LAUNCH':
+                selector = '.Launch';
+                break;
+            case 'SPACEPORT':
+                selector = '.Spaceport';
+                break;
+            case 'SPACE CAPSULE':
+                selector = '.Space';
+                break;
+            default:
+                selector = '';
+        }
+        if (selector) {
+            scrollToSection(selector);
+        }
+    };
+
+    const scrollToSection = (selector) => {
+        const section = document.querySelector(selector);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     // Get the correct image based on the destination name
     const technologyImage = technologyImages[technology.name];
 
     return (
-        <section className="technology-item" ref={technologyRef}>
+        <section className={`${technology.name} technology-item`} ref={technologyRef}>
             <h1><span>03</span> Space lauNch 101</h1>
             <div className="container">
                 <div className="left">
                     <div className="numbers">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
+                        <button className={activeMenu} onClick={() => handleMenuClick('SPACE LAUNCH')}>1</button>
+                        <button className={activeMenu} onClick={() => handleMenuClick('SPACEPORT')}>2</button>
+                        <button className={activeMenu} onClick={() => handleMenuClick('SPACE CAPSULE')}>3</button>
                     </div>
                     <div className="techno-infos"><span>The terminology ...</span>
                         <h3>{technology.name}</h3>
